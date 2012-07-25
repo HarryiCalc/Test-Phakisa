@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2683DFAA-F366-4EAA-987B-F8617F884F4D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Phakisa</RootNamespace>
+    <AssemblyName>Phakisa</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Execs\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="clsABC, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Classes-SJ\DLL_Compiles\clsABC.dll</HintPath>
+    </Reference>
+    <Reference Include="clsAnalysis, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Classes-SJ\DLLs\DLL_Compiles\clsAnalysis.dll</HintPath>
+    </Reference>
+    <Reference Include="clsBL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Classes-SJ\DLLs\DLL_Compiles\clsBL.dll</HintPath>
+    </Reference>
+    <Reference Include="clsDBase, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Classes-SJ\DLLs\DLL_Compiles\clsDBase.dll</HintPath>
+    </Reference>
+    <Reference Include="clsGeneral, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Classes-SJ\DLLs\DLL_Compiles\clsGeneral.dll</HintPath>
+    </Reference>
+    <Reference Include="clsMain, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Classes\DLLsAndCompiles\DLL_Compiles\clsMain.dll</HintPath>
+    </Reference>
+    <Reference Include="clsTable, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Classes-SJ\DLL_Compiles\clsTable.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Classes-SJ\DLLs\DLL_Compiles\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Classes\Classes-SJ\DLLs\DLLs\SharpZipLib_0860_Bin\net-20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.MSDASC, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Classes-SJ\DLLs\DLL_Compiles\Interop.MSDASC.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Reference Include="Office, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\clsShared.cs" />
+    <Compile Include="Classes\clsTableFormulas.cs" />
+    <Compile Include="Classes\excel.cs" />
+    <Compile Include="Classes\InputBox.cs" />
+    <Compile Include="Classes\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\scrAudit.resx">
+      <DependentUpon>scrAudit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\scrPayroll.resx">
+      <DependentUpon>scrPayroll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\scrProfile.resx">
+      <DependentUpon>scrProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\scrQuerySQL.resx">
+      <DependentUpon>scrQuerySQL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\scrSecurity.resx">
+      <DependentUpon>scrSecurity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\scrTeamD.resx">
+      <DependentUpon>scrTeamD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\scrOfficials.resx">
+      <DependentUpon>scrOfficials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\scrEngineering.resx">
+      <DependentUpon>scrEngineering.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\scrLogon.resx">
+      <DependentUpon>scrLogon.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Screens\scrAudit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\scrAudit.designer.cs">
+      <DependentUpon>scrAudit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\scrPayroll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\scrPayroll.designer.cs">
+      <DependentUpon>scrPayroll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\scrProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\scrProfile.designer.cs">
+      <DependentUpon>scrProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\scrQuerySQL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\scrQuerySQL.designer.cs">
+      <DependentUpon>scrQuerySQL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\scrSecurity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\scrSecurity.designer.cs">
+      <DependentUpon>scrSecurity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\scrTeamD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\scrTeamD.designer.cs">
+      <DependentUpon>scrTeamD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\scrOfficials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\scrOfficials.designer.cs">
+      <DependentUpon>scrOfficials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\scrEngineering.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\scrEngineering.designer.cs">
+      <DependentUpon>scrEngineering.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\scrLogon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\scrLogon.designer.cs">
+      <DependentUpon>scrLogon.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\ajax-loader%282%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\ajax-loader.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="MetaReport">
+      <Guid>{B3E51093-2D11-46F0-9035-81D5896C619D}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="MetaReportRuntime">
+      <Guid>{D7461564-AB68-4E9E-BFA2-669EE33720E5}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>if /I "$(ConfigurationName)" == "Release" Eazfuscator.NET.exe "$(TargetPath)" --msbuild-project-path "$(ProjectPath)" --msbuild-project-configuration "$(ConfigurationName)" -n --newline-flush</PostBuildEvent>
+  </PropertyGroup>
+</Project>
